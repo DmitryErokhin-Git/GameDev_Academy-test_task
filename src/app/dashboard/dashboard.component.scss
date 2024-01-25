@@ -1,0 +1,75 @@
+:host {
+
+  main {
+    margin: 20px;
+
+    .content {
+      display: flex;
+      margin: 20px 0;
+      align-items: center;
+
+      img {
+        border: 1px solid black;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+
+        p {
+          margin: 7px;
+        }
+      }
+    }
+  }
+
+  .inputText {
+    width: 367px;
+    max-width: 83vw;
+    border: none;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 #4b53f2;
+  }
+
+  .button {
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    &_info {
+      background-color: #4b53f2;
+    }
+
+    &_success {
+      background-color: #249F5D;
+    }
+
+    &_warning {
+      background-color: #FCCA00;
+      color: black;
+    }
+
+    &_fail {
+      background-color: #FC5A5A;
+    }
+
+    &_out {
+      background-color: #004961;
+    }
+  }
+
+  button:hover {
+    filter: brightness(90%);
+  }
+
+}
+

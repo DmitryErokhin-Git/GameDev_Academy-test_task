@@ -1,0 +1,94 @@
+<div class="login login_white">
+
+  <div class="login__form-header">
+    <img src="assets/Logo3%201.svg"
+         alt="Image"
+         class="login__logo">
+
+    <div class="login__text login__text_main">
+      Добро пожаловать
+    </div>
+
+    <span class="login__text login__text_description">
+        Авторизуйтесь чтобы продолжить
+      </span>
+  </div>
+
+  <form [formGroup]=loginForm
+        (ngSubmit)="signIn()"
+        class="login__form">
+    <label for="email"
+           class="login__input-label">
+      Логин*
+    </label>
+    <input id="email"
+           [ngClass]="{
+           'login__input_invalid' : !loginForm.controls.login.untouched && loginForm.controls.login.invalid,
+           'login__input_valid' : !loginForm.controls.login.untouched && !loginForm.controls.login.invalid
+           }"
+           formControlName="login"
+           type="text"
+           placeholder="mail@simmmple.com"
+           class="login__input">
+
+    <div class="login__valid-img">
+      <img *ngIf="!loginForm.controls.login.untouched || loginForm.controls.login.dirty"
+           src="{{
+            loginForm.controls.login.invalid
+            ? './assets/Union-red.svg'
+            : './assets/Tick%20Square.svg'
+            }}">
+    </div>
+
+    <label for="password"
+           class="login__input-label">
+      Пароль*
+    </label>
+    <div class="login__password">
+      <input [type]="show ? 'text' : 'password'"
+             id="password"
+             type="password"
+             class="login__input"
+             [ngClass]="{
+             'login__input_valid' : !loginForm.controls.password.untouched && !loginForm.controls.password.invalid,
+              'login__input_invalid' : !loginForm.controls.password.untouched && loginForm.controls.password.invalid
+              }"
+             formControlName="password"
+             placeholder="Минимум {{minLengthPassword}} символов"/>
+
+      <button class="login__button_password"
+              type="button"
+              (click)="toggleVisibility()">
+        <img src="{{show ? './assets/remove_red_eye.svg' : './assets/akar-icons_eye-closed.svg' }}">
+      </button>
+    </div>
+
+    <div class="input__form-footer">
+      <div class="input__input-checkbox">
+        <input
+          class="login__input-checkbox"
+          id="checkbox"
+          formControlName="rememberMe"
+          type="checkbox">
+        <label for="checkbox"
+               class="login__input-label_checkbox">
+          Запомнить
+        </label>
+
+      </div>
+      <a [routerLink]="['/not-found']"
+         class="login__link">
+        Забыли пароль?
+      </a>
+    </div>
+
+    <button class="login__button login__button_signIn"
+            type="submit"
+            [disabled]="loginForm.controls.login.invalid || loginForm.controls.password.invalid">
+      Войти
+    </button>
+  </form>
+</div>
+
+
+

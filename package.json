@@ -1,0 +1,36 @@
+{
+  "name": "pna-test-task",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "14.2.2",
+    "@angular/cdk": "14.2.2",
+    "@angular/common": "14.2.2",
+    "@angular/compiler": "14.2.2",
+    "@angular/core": "14.2.2",
+    "@angular/forms": "14.2.2",
+    "@angular/platform-browser": "14.2.2",
+    "@angular/platform-browser-dynamic": "14.2.2",
+    "@angular/router": "14.2.2",
+    "ngx-cookie-service": "^14.0.1",
+    "rxjs": "^6.5.3",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "14.2.2",
+    "@angular/cli": "14.2.2",
+    "@angular/compiler-cli": "14.2.2",
+    "typescript": ">=4.6.2"
+  }
+}

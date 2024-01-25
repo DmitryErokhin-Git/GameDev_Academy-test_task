@@ -1,0 +1,12 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+@import './app/shared/styles/toast';
+
+html, body {
+  min-height: 100vh;
+}
+
+app-login, app-not-found {
+  min-height: 100vh;
+  display: flex;
+  margin: auto;
+}

@@ -1,0 +1,21 @@
+<main>
+  <div *ngIf="authService.currentUser" class="content">
+    <img src="{{authService.currentUser.userAvatar}}" alt="User avatar">
+    <div class="user-info">
+      <p>{{authService.currentUser.userName}}</p>
+      <p>ID пользователя: {{authService.currentUser.userId}}</p>
+      <button type="button" (click)="authService.signOut()" class="button button_out">Выйти</button>
+    </div>
+  </div>
+
+  <h3>Сообщение</h3>
+
+  <input class="inputText" #inputText placeholder="Введите текст сообщения" value="My message">
+  <div>
+    <button type="button" (click)="mYshowFail()" class="button button_fail">Ошибка</button>
+    <button ptype="button" (click)="mYshowWarning()" class="button button_warning">Предупреждение</button>
+    <button type="button" (click)="mYshowSuccess()" class="button button_success">Успех</button>
+    <button type="button" (click)="mYshowCustom(inputText.value)" class="button button_info">Сообщение</button>
+  </div>
+
+</main>

@@ -1,0 +1,62 @@
+:host {
+
+  .my-toast {
+    margin: 10px;
+    border-radius: 5px;
+    width: 320px;
+    min-height: 40px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+  }
+
+  .my-toast-img {
+    margin-top: 8px;
+
+    //img {
+    //}
+  }
+
+  .my-toast-message {
+    padding: 8px 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    p {
+      margin: 0;
+      white-space: break-spaces;
+      text-align: justify;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 240px;
+    }
+  }
+
+  .my-toast-button-close {
+    border: none;
+    background-color: transparent;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.my-info {
+  border-left: 5px solid #4b53f2;
+}
+
+.my-success {
+  border-left: 5px solid #249F5D;
+}
+
+.my-warning {
+  border-left: 5px solid #FCCA00;
+}
+
+.my-fail {
+  border-left: 5px solid #FC5A5A;
+}

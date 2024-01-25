@@ -1,0 +1,43 @@
+.my-overlay-container, .my-global-overlay-wrapper {
+  pointer-events: none;
+  height: max-content;
+  width: max-content;
+}
+
+//.my-overlay-container {
+//}
+
+.my-global-overlay-wrapper {
+  position: relative;
+}
+
+//.my-overlay-pane {
+//}
+
+.my-toast-top-right {
+  bottom: auto;
+  left: auto;
+  top: 70px !important;
+  right: 10px !important;
+}
+
+.my-toast-top-left {
+  bottom: auto;
+  right: auto;
+  top: 70px !important;
+  left: 10px !important;
+}
+
+.my-toast-bottom-right {
+  top: auto;
+  left: auto;
+  bottom: 70px !important;
+  right: 10px !important;
+}
+
+.my-toast-bottom-left {
+  top: auto;
+  right: auto;
+  bottom: 70px !important;
+  left: 10px !important;
+}

@@ -1,0 +1,20 @@
+<div [@animations]="show"
+     class="my-toast"
+     [ngClass]="type">
+
+  <div class="my-toast-img">
+    <img src="{{iconPath}}">
+  </div>
+
+  <div class="my-toast-message">
+    <p>{{ message }} </p>
+  </div>
+
+  <div>
+    <button class="my-toast-button-close"
+            (click)="close()">
+      <img src="assets/Union-close.svg">
+    </button>
+  </div>
+
+</div>
